@@ -1,22 +1,15 @@
-import {
-  Text,
-  View,
-  TextInput,
-  Pressable,
-  StyleSheet,
-  FlatList,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { useState, useContext, useEffect } from "react";
 import { themeContext } from "@/context/ThemeContext";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { useContext, useEffect, useState } from "react";
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import { Inter_500Medium, useFonts } from "@expo-google-fonts/inter";
-import Animated, { LinearTransition } from "react-native-reanimated";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { StatusBar } from "expo-status-bar";
-import { useRouter } from "expo-router";
 import Octicons from "@expo/vector-icons/Octicons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useRouter } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import Animated, { LinearTransition } from "react-native-reanimated";
 
 import { data } from "@/data/todo";
 
@@ -225,7 +218,7 @@ function createStyles(theme, colorScheme) {
       padding: 10,
       marginRight: 10,
       fontSize: 18,
-      fontFamily: Inter_500Medium,
+      fontFamily: "Inter_500Medium",
       minWidth: 0,
       color: theme.text,
     },
@@ -255,7 +248,7 @@ function createStyles(theme, colorScheme) {
     todoText: {
       flex: 1,
       fontSize: 16,
-      fontFamily: Inter_500Medium,
+      fontFamily: "Inter_500Medium",
       color: theme.text,
     },
     completedText: {
